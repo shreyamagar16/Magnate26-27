@@ -25,7 +25,7 @@ export default async function EventPage({ params }) {
     ['Participants', event.participants],
     ['Prize pool', event.prize],
     ['Team size', event.teamSize],
-  ].filter(([, value]) => value);
+  ].filter(([, value]) => value && value !== 'TBA');
 
   return (
     <main className="event-page grid-bg">
@@ -33,12 +33,26 @@ export default async function EventPage({ params }) {
       <h1>{event.title}</h1>
       <p className="tagline">{event.tagline}</p>
 
-      <div className="gallery">
-        {event.gallery.map((src, i) => (
-          <img key={src} src={src} alt={`${event.title} photo ${i + 1}`} />
-        ))}
-      </div>
+      {/* Hero: heroImage left + About right — used when heroImage is explicitly set (e.g. Ideathon) */}
+      {event.heroImage && (
+        <div className={`event-hero-row${event.about ? ' has-both' : ''}`}>
+          <div className="event-hero-img-wrap">
+            <img
+              src={event.heroImage}
+              alt={`${event.title} group photo`}
+              className="event-hero-img"
+            />
+          </div>
+          {event.about && (
+            <section className="event-about">
+              <h2 className="section-heading">About the Event</h2>
+              <p className="event-about-body">{event.about}</p>
+            </section>
+          )}
+        </div>
+      )}
 
+      {/* Info cards */}
       <div className="facts">
         {facts.map(([label, value]) => (
           <div className="fact" key={label}>
@@ -47,6 +61,45 @@ export default async function EventPage({ params }) {
           </div>
         ))}
       </div>
+
+      {/* Photo gallery — used when event.images is set (e.g. Boardroom) */}
+      {event.images && event.images.length > 0 && (
+        <div className={`event-images event-images--${event.images.length === 1 ? 'single' : 'grid'}`}>
+          {event.images.map((src, i) => (
+            <div className="event-img-wrap" key={src}>
+              <img
+                src={src}
+                alt={`${event.title} session photo ${i + 1}`}
+                className="event-img"
+              />
+            </div>
+          ))}
+        </div>
+      )}
+
+      {/* About the Event — standalone (used when no heroImage, e.g. Boardroom) */}
+      {event.about && !event.heroImage && (
+        <section className="event-about event-about--standalone">
+          <h2 className="section-heading">About the Event</h2>
+          <p className="event-about-body">{event.about}</p>
+        </section>
+      )}
+
+      {/* Rounds — optional */}
+      {event.rounds && event.rounds.length > 0 && (
+        <section className="event-rounds">
+          <h2 className="section-heading">Rounds</h2>
+          <div className="rounds-grid">
+            {event.rounds.map((round) => (
+              <div className="round-card" key={round.label}>
+                <span className="round-label">{round.label}</span>
+                <h3 className="round-title">{round.title}</h3>
+                <p className="round-desc">{round.description}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
 
       <p className="event-desc">{event.description}</p>
 
