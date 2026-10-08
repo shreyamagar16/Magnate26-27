@@ -1,0 +1,65 @@
+.bounceCardsContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  height: 450px;
+}
+
+@media (max-width: 768px) {
+  .bounceCardsContainer {
+    height: 350px;
+  }
+}
+
+.card {
+  position: absolute;
+  width: 280px;
+  aspect-ratio: 1;
+  border: 5px solid #fff;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 200px;
+    border-width: 3px;
+    border-radius: 16px;
+  }
+}
+
+.card .image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  filter: brightness(0.5);
+}
+
+.card-title {
+  position: relative;
+  z-index: 2;
+  font-size: 2.8rem;
+  text-align: center;
+  line-height: 1.1;
+  padding: 0 10px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.9);
+  color: #4ade80; /* match theme */
+  filter: hue-rotate(85deg); /* shifts Nabla's yellow/orange to green */
+}
+
+@media (max-width: 768px) {
+  .card-title {
+    font-size: 2rem;
+  }
+}
