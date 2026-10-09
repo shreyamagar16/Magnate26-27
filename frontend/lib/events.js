@@ -29,7 +29,9 @@ export const EVENTS = [
     card: 'https://picsum.photos/400/400?grayscale', // placeholder card image for deck
     tagline: 'Innovate and Create',
     // No gallery — image block will be skipped on the detail page
-    heroImage: '/events/ideathon-group.jpg',
+    heroImage: '/events/ideathon-magnate-stage.jpg',
+    heroAlt: 'Hosts on stage at Magnate, Wall Street themed event',
+    heroObjectPosition: 'center',
     date: '22nd October',
     venue: 'IT Seminar Hall, PICT',
     participants: '2-5 per team',

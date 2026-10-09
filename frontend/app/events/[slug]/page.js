@@ -39,8 +39,9 @@ export default async function EventPage({ params }) {
           <div className="event-hero-img-wrap">
             <img
               src={event.heroImage}
-              alt={`${event.title} group photo`}
+              alt={event.heroAlt || `${event.title} group photo`}
               className="event-hero-img"
+              style={event.heroObjectPosition ? { objectPosition: event.heroObjectPosition } : undefined}
             />
           </div>
           {event.about && (
