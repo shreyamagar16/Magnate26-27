@@ -52,8 +52,8 @@ export const EVENTS = [
           'Present your idea in a 10-minute pitch in front of a panel of experts and judges, followed by their questions and feedback.',
       },
     ],
-    registration: false,
-    registerUrl: '#',
+    registration: true,
+    registerUrl: '/register',
   },
   {
     slug: 'casecom',
@@ -63,12 +63,12 @@ export const EVENTS = [
     gallery: ['https://picsum.photos/400/400?grayscale'],
     date: 'TBA',
     venue: 'TBA',
-    participants: 'TBA',
+    participants: '2–5 per team',
     prize: 'TBA',
-    teamSize: 'TBA',
+    teamSize: '2–5 members',
     description: 'Case competition...',
-    registration: false,
-    registerUrl: '#'
+    registration: true,
+    registerUrl: '/register/casecom'
   },
   {
     slug: 'fun-game',
