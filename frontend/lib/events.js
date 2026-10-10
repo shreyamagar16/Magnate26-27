@@ -34,8 +34,6 @@ export const EVENTS = [
     heroObjectPosition: 'center',
     date: '22nd October',
     venue: 'IT Seminar Hall, PICT',
-    participants: '2-5 per team',
-    prize: '₹10,000',
     teamSize: '2-5 members',
     description: 'An exciting ideathon...',
     about:
@@ -62,13 +60,14 @@ export const EVENTS = [
     title: 'CaseCom',
     card: 'https://picsum.photos/500/500?grayscale',
     tagline: 'Solve real problems',
-    gallery: ['https://picsum.photos/400/400?grayscale'],
-    date: 'TBA',
-    venue: 'TBA',
-    participants: 'TBA',
-    prize: 'TBA',
-    teamSize: 'TBA',
+    heroImage: '/events/casecom.jpg',
+    heroAlt: 'Team presenting their business model at the Magnate CaseCom',
+    heroObjectPosition: 'center 55%',
+    date: '22nd October',
+    venue: 'IT Seminar Hall, PICT',
+    teamSize: '2-5 members',
     description: 'Case competition...',
+    about: 'CaseCom puts you in the middle of a real business problem and asks you to find a way through it. Teams are given a case study drawn from the world of startups and business, and you have to analyse it, build a strategy, and present your solution to a panel of judges. It is not about having the right answer — it is about how clearly you think, how well you structure your reasoning, and how confidently you defend your decisions under pressure. Every case is different, and every pitch is a chance to sharpen the skills that matter in the real world. If you enjoy dissecting problems and turning them into plans, this is the room for you.',
     registration: false,
     registerUrl: '#'
   },
@@ -108,13 +107,15 @@ export const EVENTS = [
     title: 'E-Cell Meetup',
     card: 'https://picsum.photos/300/300?grayscale',
     tagline: 'Meet like-minded people',
-    gallery: ['https://picsum.photos/400/400?grayscale'],
-    date: 'TBA',
-    venue: 'TBA',
-    participants: 'TBA',
-    prize: 'TBA',
-    teamSize: 'TBA',
+    heroImage: '/events/ecell-meetup.jpg',
+    heroAlt: 'Students on stage at the Magnate E-Cell Meetup',
+    heroObjectPosition: 'center 40%',
+    date: '23rd October',
+    venue: 'IT Seminar Hall, PICT',
+    participants: 'Open to all',
     description: 'Networking and meetup...',
+    about:
+      "The E-Cell Meetup is a relaxed, open gathering for anyone curious about entrepreneurship, startups, or simply looking to connect with like-minded people. Whether you're a first-year student with a spark of an idea or someone who has already been building, this is the space where conversations happen naturally. You'll meet fellow students, share experiences, and hear perspectives that don't usually come up in a classroom. There are no pitches and no pressure — just good conversations, new connections, and the energy that comes from being in a room full of people who are excited about building things. Come as you are, and leave with at least one person you didn't know before.",
     registration: false,
     registerUrl: '#'
   }
@@ -123,3 +124,4 @@ export const EVENTS = [
 export function getEvent(slug) {
   return EVENTS.find((e) => e.slug === slug);
 }
+
