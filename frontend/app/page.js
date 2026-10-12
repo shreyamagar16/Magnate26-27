@@ -80,7 +80,7 @@ export default function Home() {
           <p className="date">22ND TO 24TH OCTOBER</p>
 
           <div className="buttons">
-            <a href="#events" className="btn btn-primary">Enter the ring</a>
+            <a href="/about" className="btn btn-primary">Enter the ring</a>
             <a href="#about" className="btn btn-ghost">Learn more</a>
           </div>
 

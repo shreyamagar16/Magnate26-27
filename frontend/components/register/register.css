@@ -1,0 +1,397 @@
+﻿/* =========================================================
+   register.css — ALL class names start with reg- or register-page.
+   Values are copied from events.css / sections.css / globals.css.
+   No existing global class names are used as selectors here.
+   ========================================================= */
+
+/* Page shell — mirrors .event-page + .page */
+.register-page {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 148px 24px 100px;
+  min-height: 100vh;
+}
+
+/* Heading — mirrors .event-page h1 */
+.reg-heading {
+  color: #4ade80;
+  font-size: clamp(38px, 7vw, 68px);
+  margin-top: 18px;
+  line-height: 1.1;
+}
+
+/* Tagline — mirrors .event-page .tagline */
+.reg-tagline {
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+/* Fact chip — mirrors .fact / .fact span / .fact strong */
+.reg-meta {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 16px 20px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.14), rgba(0, 0, 0, 0.5));
+  border: 1px solid rgba(74, 222, 128, 0.22);
+  margin-top: 24px;
+}
+.reg-meta-label {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  color: rgba(255, 255, 255, 0.55);
+  text-transform: uppercase;
+}
+.reg-meta-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* Back link — mirrors .back */
+.reg-back {
+  color: #4ade80;
+  text-decoration: none;
+  font-size: 14px;
+  display: inline-block;
+}
+.reg-back:hover { color: #fff; }
+
+/* =========================================================
+   Form sections
+   ========================================================= */
+
+.reg-form { margin-top: 40px; }
+
+/* Section block — mirrors .round-card */
+.reg-section {
+  padding: 28px 24px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.10), rgba(0, 0, 0, 0.5));
+  border: 1px solid rgba(74, 222, 128, 0.22);
+  margin-bottom: 20px;
+}
+
+/* Section title — mirrors .round-label */
+.reg-section-title {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  color: #4ade80;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* Member card */
+.reg-member-card {
+  padding: 24px 20px;
+  border-radius: 14px;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(74, 222, 128, 0.18);
+  margin-bottom: 16px;
+  transition: border-color 0.2s;
+}
+.reg-member-card:last-child { margin-bottom: 0; }
+.reg-member-card:hover { border-color: rgba(74, 222, 128, 0.35); }
+
+.reg-member-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.reg-member-label {
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  color: #4ade80;
+  text-transform: uppercase;
+}
+.reg-member-optional {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+  margin-left: 8px;
+}
+
+/* Remove member button */
+.reg-remove-btn {
+  background: none;
+  border: 1px solid rgba(255, 100, 80, 0.35);
+  border-radius: 8px;
+  color: rgba(255, 120, 100, 0.8);
+  font-size: 12px;
+  padding: 4px 10px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+  letter-spacing: 0.06em;
+}
+.reg-remove-btn:hover {
+  background: rgba(255, 80, 60, 0.12);
+  border-color: rgba(255, 100, 80, 0.6);
+  color: #ff8070;
+}
+
+/* =========================================================
+   Field groups
+   ========================================================= */
+
+.reg-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+.reg-field:last-child { margin-bottom: 0; }
+
+/* Label — mirrors .fact span style */
+.reg-label {
+  font-size: 11px;
+  letter-spacing: 0.13em;
+  color: rgba(255, 255, 255, 0.55);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.reg-required-star {
+  color: #f87171;
+  margin-left: 3px;
+}
+
+/* Shared input/select/textarea */
+.reg-input,
+.reg-select,
+.reg-textarea {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(74, 222, 128, 0.3);
+  border-radius: 14px;
+  color: #fff;
+  font-size: 15px;
+  font-family: inherit;
+  padding: 12px 14px;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.reg-input::placeholder,
+.reg-textarea::placeholder {
+  color: rgba(255, 255, 255, 0.28);
+}
+.reg-input:focus,
+.reg-select:focus,
+.reg-textarea:focus {
+  border-color: #4ade80;
+  box-shadow: 0 0 0 3px rgba(74, 222, 128, 0.15);
+}
+.reg-input[aria-invalid="true"],
+.reg-select[aria-invalid="true"],
+.reg-textarea[aria-invalid="true"] {
+  border-color: rgba(251, 146, 60, 0.7);
+  box-shadow: 0 0 0 3px rgba(251, 146, 60, 0.1);
+}
+.reg-select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='rgba(74%2C222%2C128%2C0.7)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+  background-color: rgba(255, 255, 255, 0.06);
+  cursor: pointer;
+}
+.reg-select option { background: #0a0a0a; color: #fff; }
+.reg-textarea { resize: vertical; min-height: 90px; }
+
+/* Inline error */
+.reg-field-error {
+  font-size: 12px;
+  color: #fb923c;
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+  margin-top: 2px;
+}
+
+/* =========================================================
+   Member counter + add button
+   ========================================================= */
+
+.reg-members-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.reg-members-count {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.45);
+  text-transform: uppercase;
+}
+.reg-add-btn {
+  background: none;
+  border: 1px solid rgba(74, 222, 128, 0.4);
+  border-radius: 999px;
+  color: #4ade80;
+  font-size: 13px;
+  font-family: inherit;
+  padding: 7px 18px;
+  cursor: pointer;
+  transition: background 0.15s, box-shadow 0.15s;
+  letter-spacing: 0.06em;
+}
+.reg-add-btn:hover {
+  background: rgba(74, 222, 128, 0.1);
+  box-shadow: 0 0 14px rgba(74, 222, 128, 0.25);
+}
+.reg-add-btn:disabled {
+  opacity: 0.35;
+  cursor: default;
+  box-shadow: none;
+}
+
+/* =========================================================
+   Alert banner + honeypot
+   ========================================================= */
+
+.reg-alert {
+  padding: 14px 18px;
+  border-radius: 12px;
+  background: rgba(251, 146, 60, 0.1);
+  border: 1px solid rgba(251, 146, 60, 0.4);
+  color: #fb923c;
+  font-size: 14px;
+  line-height: 1.55;
+  margin-bottom: 20px;
+}
+.reg-retry-hint {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.45);
+  margin-top: 6px;
+}
+
+/* Honeypot — visually hidden */
+.reg-honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* =========================================================
+   Submit — values copied from .register-btn
+   ========================================================= */
+
+.reg-submit-btn {
+  display: inline-block;
+  background: #4ade80;
+  color: #000;
+  font-weight: 700;
+  padding: 16px 40px;
+  border-radius: 999px;
+  border: none;
+  font-family: inherit;
+  font-size: 15px;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s, opacity 0.15s;
+  margin-top: 8px;
+}
+.reg-submit-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 0 22px rgba(74, 222, 128, 0.55);
+}
+.reg-submit-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+.reg-submit-row {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+/* =========================================================
+   Success panel — values copied from .register-box
+   ========================================================= */
+
+.reg-success {
+  text-align: center;
+  padding: 56px 24px;
+  border: 2px solid rgba(74, 222, 128, 0.5);
+  border-radius: 32px;
+  background: linear-gradient(180deg, rgba(34, 197, 94, 0.16), rgba(0, 0, 0, 0.6));
+  margin-top: 40px;
+}
+.reg-success-icon { font-size: 48px; margin-bottom: 16px; }
+.reg-success h2 {
+  color: #4ade80;
+  font-size: clamp(24px, 5vw, 38px);
+  margin-bottom: 10px;
+}
+.reg-success-sub {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+.reg-success-code {
+  display: inline-block;
+  background: rgba(74, 222, 128, 0.12);
+  border: 1px solid rgba(74, 222, 128, 0.4);
+  border-radius: 14px;
+  padding: 18px 32px;
+  margin-bottom: 24px;
+}
+.reg-success-code span {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.reg-success-code strong {
+  font-size: 26px;
+  color: #4ade80;
+  letter-spacing: 0.08em;
+}
+.reg-success-already {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.45);
+  margin-top: 12px;
+}
+.reg-success-home {
+  display: inline-block;
+  color: #4ade80;
+  text-decoration: none;
+  font-size: 14px;
+  border-bottom: 1px solid rgba(74, 222, 128, 0.4);
+  padding-bottom: 2px;
+  transition: color 0.2s;
+  margin-top: 20px;
+}
+.reg-success-home:hover { color: #fff; }
+
+/* =========================================================
+   Responsive
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .register-page { padding: 120px 16px 80px; }
+  .reg-section { padding: 20px 16px; }
+  .reg-member-card { padding: 18px 14px; }
+  .reg-submit-btn { width: 100%; text-align: center; }
+}
