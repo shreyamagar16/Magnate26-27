@@ -10,11 +10,10 @@ import './events.css';
 const nabla = Nabla({ subsets: ['latin'] });
 
 const transformStyles = [
-  "rotate(5deg) translate(-220px)",
-  "rotate(0deg) translate(-110px)",
-  "rotate(-5deg)",
-  "rotate(5deg) translate(110px)",
-  "rotate(-5deg) translate(220px)"
+  "rotate(-8deg) translate(-180px)",
+  "rotate(-2deg) translate(-60px)",
+  "rotate(2deg) translate(60px)",
+  "rotate(8deg) translate(180px)"
 ];
 
 export default function EventDeck() {

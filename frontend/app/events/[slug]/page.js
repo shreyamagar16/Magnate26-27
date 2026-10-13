@@ -102,18 +102,18 @@ export default async function EventPage({ params }) {
         </section>
       )}
 
-      <p className="event-desc">{event.description}</p>
+      {event.description && <p className="event-desc">{event.description}</p>}
 
-      <div className="register-box">
-        {event.registration ? (
-          <>
-            <p>Ready to take part?</p>
-            <a href={event.registerUrl} className="register-btn">Register for {event.title}</a>
-          </>
-        ) : (
+      {event.registration ? (
+        <div className="register-box">
+          <p>Ready to take part?</p>
+          <a href={event.registerUrl} className="register-btn">Register for {event.title}</a>
+        </div>
+      ) : event.slug === 'e-cell-meetup' || event.slug === 'boardroom' ? null : (
+        <div className="register-box">
           <p>{event.title} is an open event. No registration needed.</p>
-        )}
-      </div>
+        </div>
+      )}
     </main>
   );
 }

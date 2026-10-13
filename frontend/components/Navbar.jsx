@@ -16,10 +16,6 @@ export default function Navbar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
-  const handleGoogleLogin = () => {
-    // PASTE YOUR EXISTING GOOGLE LOGIN CALL HERE (e.g. signIn('google'))
-  };
-
   return (
     <header className="nav">
       <Link href="/" className="nav-brand">
@@ -38,9 +34,6 @@ export default function Navbar() {
             {link.label}
           </Link>
         ))}
-        <button className="nav-login" onClick={handleGoogleLogin}>
-          Continue with Google
-        </button>
       </nav>
 
       <button className="nav-toggle" onClick={() => setOpen(!open)} aria-label="Menu">

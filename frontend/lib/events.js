@@ -26,11 +26,10 @@ export const EVENTS = [
   {
     slug: 'ideathon',
     title: 'Ideathon',
-    card: 'https://picsum.photos/400/400?grayscale', // placeholder card image for deck
+    card: '/events/ideathon-card-new.png',
     tagline: 'Innovate and Create',
-    // No gallery — image block will be skipped on the detail page
-    heroImage: '/events/ideathon-magnate-stage.jpg',
-    heroAlt: 'Hosts on stage at Magnate, Wall Street themed event',
+    heroImage: '/events/ideathon-hero-new.jpg',
+    heroAlt: 'Ideathon presentation session at Magnate',
     heroObjectPosition: 'center',
     date: '22nd October',
     venue: 'IT Seminar Hall, PICT',
@@ -58,7 +57,7 @@ export const EVENTS = [
   {
     slug: 'casecom',
     title: 'CaseCom',
-    card: 'https://picsum.photos/500/500?grayscale',
+    card: '/events/casecom-card-new.png',
     tagline: 'Solve real problems',
     heroImage: '/events/casecom.jpg',
     heroAlt: 'Team presenting their business model at the Magnate CaseCom',
@@ -72,31 +71,15 @@ export const EVENTS = [
     registerUrl: '/register/casecom'
   },
   {
-    slug: 'fun-game',
-    title: 'Fun Game',
-    card: 'https://picsum.photos/600/600?grayscale',
-    tagline: 'Relax and have fun',
-    gallery: ['https://picsum.photos/400/400?grayscale'],
-    date: 'TBA',
-    venue: 'TBA',
-    participants: 'TBA',
-    prize: 'TBA',
-    teamSize: 'TBA',
-    description: 'Fun games...',
-    registration: false,
-    registerUrl: '#'
-  },
-  {
     slug: 'boardroom',
     title: 'Boardroom',
-    card: 'https://picsum.photos/700/700?grayscale',
+    card: '/events/boardroom-card-new.jpg',
     tagline: 'Step into the shoes of a CEO',
     heroImage: '/events/boardroom/session-1.jpg',
     date: '24th October',
     venue: 'IT Seminar Hall, PICT',
     participants: 'Open to all',
     // No prize or teamSize for Boardroom
-    description: 'Boardroom competition...',
     about:
       "Boardroom is an open conversation between speakers and assessors. Speakers from the startup and business world sit down with our members to talk about entrepreneurship: what it really takes to build something, the mistakes worth avoiding, and the lessons that only come from experience. They share their field expertise directly with us, and you get to ask questions, challenge ideas, and learn from people who have been through it. If you're curious about startups and entrepreneurship, this room is for you.",
     registration: false,
@@ -105,15 +88,13 @@ export const EVENTS = [
   {
     slug: 'e-cell-meetup',
     title: 'E-Cell Meetup',
-    card: 'https://picsum.photos/300/300?grayscale',
+    card: '/events/ecell-meetup-card-new.jpg',
     tagline: 'Meet like-minded people',
     heroImage: '/events/ecell-meetup.jpg',
     heroAlt: 'Students on stage at the Magnate E-Cell Meetup',
     heroObjectPosition: 'center 40%',
-    date: '23rd October',
+    date: '24th October',
     venue: 'IT Seminar Hall, PICT',
-    participants: 'Open to all',
-    description: 'Networking and meetup...',
     about:
       "The E-Cell Meetup is a relaxed, open gathering for anyone curious about entrepreneurship, startups, or simply looking to connect with like-minded people. Whether you're a first-year student with a spark of an idea or someone who has already been building, this is the space where conversations happen naturally. You'll meet fellow students, share experiences, and hear perspectives that don't usually come up in a classroom. There are no pitches and no pressure — just good conversations, new connections, and the energy that comes from being in a room full of people who are excited about building things. Come as you are, and leave with at least one person you didn't know before.",
     registration: false,

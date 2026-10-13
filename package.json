@@ -13,5 +13,8 @@
   },
   "allowScripts": {
     "unrs-resolver@1.12.2": true
+  },
+  "dependencies": {
+    "lightningcss": "^1.33.0"
   }
 }

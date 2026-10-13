@@ -18,7 +18,14 @@
 .about-block p, .about-split p, .about-cta p { color: #4ade80; line-height: 1.9; font-size: 17px; }
 
 .about-split { max-width: 1050px; margin: 110px auto 0; display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
-.about-split img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 20px; box-shadow: 0 0 30px rgba(74, 222, 128, 0.18); }
+.about-split img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(74, 222, 128, 0.18);
+  border: 1px solid rgba(74, 222, 128, 0.25);
+}
 .about-split h2 { font-size: clamp(28px, 4vw, 46px); margin-bottom: 24px; }
 
 .about-cta {

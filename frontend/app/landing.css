@@ -41,7 +41,14 @@
 .pill-text { color: rgba(255, 255, 255, 0.75); }
 
 .kicker { margin-top: 28px; color: var(--green); letter-spacing: 0.4em; font-weight: 700; font-size: 18px; }
-.date { margin-top: 18px; color: var(--green); font-weight: 700; font-size: 20px; }
+.date {
+  margin-top: 22px;
+  color: var(--green);
+  font-weight: 700;
+  font-size: clamp(26px, 4vw, 42px);
+  letter-spacing: 0.12em;
+  text-shadow: 0 0 20px rgba(74, 222, 128, 0.45);
+}
 .note { margin-top: 36px; color: rgba(74, 222, 128, 0.7); font-size: 12px; letter-spacing: 0.08em; }
 
 .buttons { margin-top: 36px; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
