@@ -23,39 +23,28 @@ export default function BounceCards({
   const containerRef = useRef(null);
 
   useEffect(() => {
-    // Kill any remaining tweens on mount and reset
-    const cards = containerRef.current?.querySelectorAll('.card');
-    if (cards) {
-      gsap.killTweensOf(cards);
-      cards.forEach((card, i) => {
-        gsap.set(card, {
-          transform: transformStyles[i] ?? 'none',
-          clearProps: 'scale'
-        });
-      });
-    }
-
     const ctx = gsap.context(() => {
-      gsap.fromTo(
-        '.card',
-        { scale: 0 },
-        {
-          scale: 1,
-          stagger: animationStagger,
-          ease: easeType,
-          delay: animationDelay
-        }
-      );
+      images.forEach((_, i) => {
+        const el = containerRef.current?.querySelector(`.card-${i}`);
+        if (!el) return;
+        const targetTransform = transformStyles[i] ?? 'none';
+        gsap.fromTo(
+          el,
+          { transform: `${targetTransform} scale(0)` },
+          {
+            transform: `${targetTransform} scale(1)`,
+            delay: animationDelay + i * animationStagger,
+            ease: easeType,
+            duration: 0.8
+          }
+        );
+      });
     }, containerRef);
 
     return () => {
       ctx.revert();
-      if (containerRef.current) {
-        const remaining = containerRef.current.querySelectorAll('.card');
-        gsap.killTweensOf(remaining);
-      }
     };
-  }, [animationStagger, easeType, animationDelay, transformStyles]);
+  }, [animationStagger, easeType, animationDelay]);
 
   const getNoRotationTransform = transformStr => {
     const hasRotate = /rotate\([\s\S]*?\)/.test(transformStr);
