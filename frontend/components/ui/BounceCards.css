@@ -29,8 +29,11 @@
 }
 
 @media (max-width: 768px) {
+  .bounceCardsContainer {
+    height: 320px;
+  }
   .card {
-    width: 190px;
+    width: 170px;
     border-width: 3px;
     border-radius: 16px;
   }
@@ -38,12 +41,23 @@
 
 @media (max-width: 480px) {
   .bounceCardsContainer {
-    height: 280px;
+    height: 270px;
   }
   .card {
-    width: 150px;
-    border-width: 2px;
+    width: 135px;
+    border-width: 2.5px;
     border-radius: 14px;
+  }
+}
+
+@media (max-width: 380px) {
+  .bounceCardsContainer {
+    height: 240px;
+  }
+  .card {
+    width: 120px;
+    border-width: 2px;
+    border-radius: 12px;
   }
 }
 
@@ -61,23 +75,24 @@
 .card-title {
   position: relative;
   z-index: 2;
-  font-size: 2.8rem;
+  font-size: 2.5rem;
+  font-weight: 700;
   text-align: center;
   line-height: 1.1;
   padding: 0 10px;
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.9);
-  color: #4ade80; /* match theme */
-  filter: hue-rotate(85deg); /* shifts Nabla's yellow/orange to green */
+  color: #4ade80;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.95), 0 0 20px rgba(0, 0, 0, 0.9);
+  letter-spacing: -0.01em;
 }
 
 @media (max-width: 768px) {
   .card-title {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
   }
 }
 
 @media (max-width: 480px) {
   .card-title {
-    font-size: 1.35rem;
+    font-size: 1.25rem;
   }
 }

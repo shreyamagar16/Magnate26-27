@@ -24,25 +24,18 @@ export default function Footer() {
             organizations.
           </p>
           <div className="socials">
-            {/* TODO: put your real Instagram / LinkedIn links */}
-            <a href="https://www.instagram.com/" aria-label="Instagram"><InstaIcon /></a>
-            <a href="https://www.linkedin.com/" aria-label="LinkedIn"><LinkedinIcon /></a>
+            <a href="https://www.instagram.com/edc_pict/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><InstaIcon /></a>
+            <a href="https://www.linkedin.com/company/edc-pict/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><LinkedinIcon /></a>
           </div>
         </div>
 
         <div className="footer-cols">
           <div>
-            <h4>Explore</h4>
-            <Link href="/">Home</Link>
-            <Link href="/events">Events</Link>
-            <Link href="#">Register</Link>
-            <Link href="/about">About</Link>
-          </div>
-          <div>
             <h4>Connect</h4>
             <Link href="/#contact">Contact</Link>
             <Link href="/privacy">Privacy Policy</Link>
-            <Link href="#">EDC PICT</Link>
+            <Link href="/developers">Our Developers</Link>
+            <a href="https://www.instagram.com/edc_pict/" target="_blank" rel="noopener noreferrer">EDC PICT</a>
           </div>
         </div>
       </div>

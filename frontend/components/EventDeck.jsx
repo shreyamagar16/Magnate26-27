@@ -4,10 +4,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import BounceCards from '@/components/ui/BounceCards';
 import { EVENTS } from '@/lib/events';
-import { Nabla } from 'next/font/google';
 import './events.css';
-
-const nabla = Nabla({ subsets: ['latin'] });
 
 const transformStyles = [
   "rotate(-8deg) translate(-180px)",
@@ -33,7 +30,7 @@ export default function EventDeck() {
   };
 
   return (
-    <div className={`deck-wrap ${nabla.className}`}>
+    <div className="deck-wrap">
       <div className="deck" onClick={handleClick} style={{ cursor: 'pointer', display: 'flex', justifyContent: 'center' }}>
         <BounceCards
           className="custom-bounceCards"

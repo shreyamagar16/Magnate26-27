@@ -89,27 +89,27 @@ export default function Home() {
       </section>
 
       {/* FULL WIDTH CAROUSEL */}
-      <section style={{ width: '100vw', padding: '0', margin: '0' }}>
-        <div style={{ width: '100%', height: '560px', position: 'relative' }}>
+      <section className="carousel-section">
+        <div className="carousel-wrapper">
           <FlexCarousel
             items={carouselItems}
             preset="liquid"
             intro="rise"
-            cardHeight={0.5}
-            gap={12}
+            cardHeight={0.35}
+            gap={10}
             squeeze={0.2}
             focusOnClick={false}
             captions={false}
             fit="natural"
             radius={0}
-            lensWidth={0.74}
-            lensHeight={1.18}
-            tilt={62}
-            roundness={1}
-            bend={0.34}
-            reach={0.38}
+            lensWidth={0.65}
+            lensHeight={0.9}
+            tilt={45}
+            roundness={0.8}
+            bend={0.25}
+            reach={0.3}
             curl="twist"
-            dispersion={0.45}
+            dispersion={0.4}
             liquid={0}
             followCursor={false}
             autoplay={false}

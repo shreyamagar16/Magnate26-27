@@ -45,6 +45,9 @@
 .socials a:hover { background: rgba(74, 222, 128, 0.15); }
 .footer-cols { display: flex; gap: 70px; }
 .footer-cols h4 { color: #4ade80; font-size: 20px; margin-bottom: 20px; }
-.footer-cols a { display: block; color: #4ade80; text-decoration: none; margin-bottom: 16px; }
+.footer-cols a { display: block; color: #4ade80; text-decoration: none; margin-bottom: 16px; transition: color 0.2s; }
 .footer-cols a:hover { color: #fff; }
+@media (max-width: 600px) {
+  .footer-inner { flex-direction: column; gap: 36px; }
+}
 .copyright { text-align: center; margin-top: 50px; color: rgba(255, 255, 255, 0.35); font-size: 13px; }
