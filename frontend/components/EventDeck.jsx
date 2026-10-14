@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 import BounceCards from '@/components/ui/BounceCards';
 import { EVENTS } from '@/lib/events';
 import './events.css';
@@ -15,6 +15,7 @@ const transformStyles = [
 
 export default function EventDeck() {
   const router = useRouter();
+  const pathname = usePathname();
   const images = EVENTS.map((e) => ({ src: e.card, title: e.title, slug: e.slug }));
 
   const handleClick = (e) => {
@@ -30,15 +31,16 @@ export default function EventDeck() {
   };
 
   return (
-    <div className="deck-wrap">
+    <div className="deck-wrap" key={pathname}>
       <div className="deck" onClick={handleClick} style={{ cursor: 'pointer', display: 'flex', justifyContent: 'center' }}>
         <div className="deck-scaler">
           <BounceCards
+            key={pathname}
             className="custom-bounceCards"
             images={images}
             containerWidth={500}
             containerHeight={300}
-            animationDelay={0.5}
+            animationDelay={0.3}
             animationStagger={0.08}
             easeType="elastic.out(1, 0.5)"
             transformStyles={transformStyles}

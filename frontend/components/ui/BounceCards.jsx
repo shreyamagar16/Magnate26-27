@@ -23,6 +23,18 @@ export default function BounceCards({
   const containerRef = useRef(null);
 
   useEffect(() => {
+    // Kill any remaining tweens on mount and reset
+    const cards = containerRef.current?.querySelectorAll('.card');
+    if (cards) {
+      gsap.killTweensOf(cards);
+      cards.forEach((card, i) => {
+        gsap.set(card, {
+          transform: transformStyles[i] ?? 'none',
+          clearProps: 'scale'
+        });
+      });
+    }
+
     const ctx = gsap.context(() => {
       gsap.fromTo(
         '.card',
@@ -35,8 +47,15 @@ export default function BounceCards({
         }
       );
     }, containerRef);
-    return () => ctx.revert();
-  }, [animationStagger, easeType, animationDelay]);
+
+    return () => {
+      ctx.revert();
+      if (containerRef.current) {
+        const remaining = containerRef.current.querySelectorAll('.card');
+        gsap.killTweensOf(remaining);
+      }
+    };
+  }, [animationStagger, easeType, animationDelay, transformStyles]);
 
   const getNoRotationTransform = transformStr => {
     const hasRotate = /rotate\([\s\S]*?\)/.test(transformStr);
