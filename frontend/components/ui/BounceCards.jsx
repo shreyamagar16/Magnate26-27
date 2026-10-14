@@ -21,34 +21,6 @@ export default function BounceCards({
   enableHover = false
 }) {
   const containerRef = useRef(null);
-  const [scaleFactor, setScaleFactor] = useState(1);
-
-  useEffect(() => {
-    const handleResize = () => {
-      const w = window.innerWidth;
-      if (w < 400) {
-        setScaleFactor(0.48);
-      } else if (w < 480) {
-        setScaleFactor(0.58);
-      } else if (w < 640) {
-        setScaleFactor(0.72);
-      } else if (w < 768) {
-        setScaleFactor(0.85);
-      } else {
-        setScaleFactor(1);
-      }
-    };
-    handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  const scaledTransformStyles = transformStyles.map(str => {
-    return str.replace(/translate\(([-0-9.]+)px\)/g, (_, px) => {
-      const val = parseFloat(px);
-      return `translate(${Math.round(val * scaleFactor)}px)`;
-    });
-  });
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -93,13 +65,12 @@ export default function BounceCards({
     if (!enableHover || !containerRef.current) return;
 
     const q = gsap.utils.selector(containerRef);
-    const pushOffset = Math.round(160 * scaleFactor);
 
     images.forEach((_, i) => {
       const target = q(`.card-${i}`);
       gsap.killTweensOf(target);
 
-      const baseTransform = scaledTransformStyles[i] || 'none';
+      const baseTransform = transformStyles[i] || 'none';
 
       if (i === hoveredIdx) {
         const noRotationTransform = getNoRotationTransform(baseTransform);
@@ -110,7 +81,7 @@ export default function BounceCards({
           overwrite: 'auto'
         });
       } else {
-        const offsetX = i < hoveredIdx ? -pushOffset : pushOffset;
+        const offsetX = i < hoveredIdx ? -160 : 160;
         const pushedTransform = getPushedTransform(baseTransform, offsetX);
 
         const distance = Math.abs(hoveredIdx - i);
@@ -135,7 +106,7 @@ export default function BounceCards({
     images.forEach((_, i) => {
       const target = q(`.card-${i}`);
       gsap.killTweensOf(target);
-      const baseTransform = scaledTransformStyles[i] || 'none';
+      const baseTransform = transformStyles[i] || 'none';
       gsap.to(target, {
         transform: baseTransform,
         duration: 0.4,
@@ -151,8 +122,8 @@ export default function BounceCards({
       ref={containerRef}
       style={{
         position: 'relative',
-        width: Math.round(containerWidth * scaleFactor),
-        height: Math.round(containerHeight * (scaleFactor < 0.7 ? 0.85 : 1))
+        width: containerWidth,
+        height: containerHeight
       }}
     >
       {images.map((item, idx) => {
@@ -163,7 +134,7 @@ export default function BounceCards({
             key={idx}
             className={`card card-${idx}`}
             style={{
-              transform: scaledTransformStyles[idx] ?? 'none'
+              transform: transformStyles[idx] ?? 'none'
             }}
             onMouseEnter={() => pushSiblings(idx)}
             onMouseLeave={resetSiblings}

@@ -30,34 +30,7 @@
 
 @media (max-width: 768px) {
   .bounceCardsContainer {
-    height: 320px;
-  }
-  .card {
-    width: 170px;
-    border-width: 3px;
-    border-radius: 16px;
-  }
-}
-
-@media (max-width: 480px) {
-  .bounceCardsContainer {
-    height: 270px;
-  }
-  .card {
-    width: 135px;
-    border-width: 2.5px;
-    border-radius: 14px;
-  }
-}
-
-@media (max-width: 380px) {
-  .bounceCardsContainer {
-    height: 240px;
-  }
-  .card {
-    width: 120px;
-    border-width: 2px;
-    border-radius: 12px;
+    height: 350px;
   }
 }
 

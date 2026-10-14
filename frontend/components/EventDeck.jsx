@@ -32,17 +32,19 @@ export default function EventDeck() {
   return (
     <div className="deck-wrap">
       <div className="deck" onClick={handleClick} style={{ cursor: 'pointer', display: 'flex', justifyContent: 'center' }}>
-        <BounceCards
-          className="custom-bounceCards"
-          images={images}
-          containerWidth={500}
-          containerHeight={300}
-          animationDelay={0.5}
-          animationStagger={0.08}
-          easeType="elastic.out(1, 0.5)"
-          transformStyles={transformStyles}
-          enableHover={true}
-        />
+        <div className="deck-scaler">
+          <BounceCards
+            className="custom-bounceCards"
+            images={images}
+            containerWidth={500}
+            containerHeight={300}
+            animationDelay={0.5}
+            animationStagger={0.08}
+            easeType="elastic.out(1, 0.5)"
+            transformStyles={transformStyles}
+            enableHover={true}
+          />
+        </div>
       </div>
 
       <nav className="deck-links">
