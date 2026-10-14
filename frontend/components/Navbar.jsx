@@ -10,6 +10,7 @@ const LINKS = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
   { label: 'Events', href: '/events' },
+  { label: 'Developers', href: '/developers' },
 ];
 
 export default function Navbar() {

@@ -34,7 +34,6 @@ export default function Footer() {
             <h4>Connect</h4>
             <Link href="/#contact">Contact</Link>
             <Link href="/privacy">Privacy Policy</Link>
-            <Link href="/developers">Our Developers</Link>
             <a href="https://www.instagram.com/edc_pict/" target="_blank" rel="noopener noreferrer">EDC PICT</a>
           </div>
         </div>

@@ -83,8 +83,6 @@ export default function Home() {
             <a href="/events" className="btn btn-primary">Enter the ring</a>
             <a href="/about" className="btn btn-ghost">Learn more</a>
           </div>
-
-          <p className="note">TERMINAL CONNECTION: SECURE. USE CHROME/EDGE.</p>
         </div>
       </section>
 

@@ -7,7 +7,7 @@ import './developers.css';
 const DEVELOPERS = [
   {
     name: 'Shreya Magar',
-    role: 'EDC Student Member',
+    role: 'EDC President',
     photo: '/developers/shreya-magar.jpg',
     initials: 'SM',
     instagram: 'https://www.instagram.com/shreyamagarr',
@@ -15,7 +15,7 @@ const DEVELOPERS = [
   },
   {
     name: 'Divyam Jain',
-    role: 'EDC Student Member',
+    role: 'EDC Event Management Head',
     photo: '/developers/divyam-jain.jpg',
     initials: 'DJ',
     instagram: 'https://www.instagram.com/divyamjain015',
@@ -23,7 +23,7 @@ const DEVELOPERS = [
   },
   {
     name: 'Devesh Gujarathi',
-    role: 'EDC Student Member',
+    role: 'EDC SY Student Member',
     photo: '/developers/devesh-gujarathi.jpg',
     initials: 'DG',
     instagram: 'https://www.instagram.com/devesh_the.outlier/',
