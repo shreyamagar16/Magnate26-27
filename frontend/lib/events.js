@@ -33,7 +33,7 @@ export const EVENTS = [
     heroObjectPosition: 'center',
     date: '22nd October',
     venue: 'IT Seminar Hall, PICT',
-    teamSize: '2-5 members',
+    teamSize: '1-4 members',
     description: 'An exciting ideathon...',
     about:
       "Ideathon is where raw ideas meet real-world thinking. Bring together your team, pick a problem worth solving, and turn your concept into a pitch that can stand up to scrutiny. Whether you're sketching your very first startup idea or refining one you've been carrying for months, this is your stage to test it, sharpen it, and get feedback from people who've been there.",
