@@ -39,30 +39,14 @@ export const REGISTRATION_EVENTS = {
     minMembers: 2,
     maxMembers: 5,
     whatsappUrl: '',
+    // Problem Statement removed — no longer collected at registration.
+    teamFields: [],
     /**
-     * "Problem Statement" from the official Google Form.
-     * The options below are the current placeholder options — update them with
-     * the real problem statement titles once they are finalised.
-     */
-    teamFields: [
-      {
-        key: 'problem_statement',
-        label: 'Problem Statement',
-        type: 'select',
-        required: false,
-        options: ['Option 1', 'Option 2', 'Option 3'],
-      },
-    ],
-    /**
-     * Per the Google Form:
-     *   - Team Leader  : Name + Email + WhatsApp  (all required)
-     *   - Member 2     : Name + WhatsApp           (required)
-     *   - Members 3–5  : Name + WhatsApp           (optional cards)
-     * Email is only collected from the Team Leader (leaderOnly: true).
+     * Email is now collected from every member (leader and non-leaders).
      */
     memberFields: [
       { key: 'name',     label: 'Full Name',    type: 'text',  core: true, required: true },
-      { key: 'email',    label: 'Email',        type: 'email', core: true, required: true, leaderOnly: true },
+      { key: 'email',    label: 'Email',        type: 'email', core: true, required: true },
       { key: 'whatsapp', label: 'WhatsApp No.', type: 'tel',   core: true, required: true },
     ],
   },

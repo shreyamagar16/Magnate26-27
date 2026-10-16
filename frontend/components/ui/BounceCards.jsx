@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import './BounceCards.css';
 
@@ -44,6 +44,7 @@ export default function BounceCards({
     return () => {
       ctx.revert();
     };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [animationStagger, easeType, animationDelay]);
 
   const getNoRotationTransform = transformStr => {

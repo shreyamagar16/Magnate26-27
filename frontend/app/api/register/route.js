@@ -68,24 +68,13 @@ export async function POST(request) {
   const { event, teamName, extra, members } = values;
 
   // Shape members for the DB function: { name, email, whatsapp, extra }
-  // For CaseCom, only the Team Leader (index 0) provides an email.
-  // Non-leader members get a unique synthetic placeholder so the DB NOT NULL / length
-  // constraint (char_length between 5 and 254) is satisfied.  The placeholder passes
-  // the DB basic-format regex ([^@\s]+@[^@\s]+\.[^@\s]+) and has a random suffix so
-  // it does not collide with the (event, lower(email)) unique index.
-  const p_members = members.map((m, i) => {
-    let email = m.email ?? '';
-    if (event === 'casecom' && i > 0 && !email) {
-      const rand = Math.random().toString(36).slice(2, 10);
-      email = `cc-p${i + 1}-${Date.now()}-${rand}@casecom.internal`;
-    }
-    return {
-      name: m.name,
-      email,
-      whatsapp: m.whatsapp,
-      extra: m.extra ?? {},
-    };
-  });
+  // All members (leader and non-leaders) now supply a real email address.
+  const p_members = members.map((m) => ({
+    name: m.name,
+    email: m.email ?? '',
+    whatsapp: m.whatsapp,
+    extra: m.extra ?? {},
+  }));
 
   let result, dbError;
   try {

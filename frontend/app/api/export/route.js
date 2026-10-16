@@ -61,18 +61,21 @@ const CASECOM_COLUMNS = [
   { header: 'Registration ID',    key: 'reg_code'          },
   { header: 'Team Name',          key: 'team_name'         },
   { header: 'Member Count',       key: 'member_count'      },
-  { header: 'Problem Statement',  key: 'team_extra'        }, // JSON: { problem_statement: "..." }
   { header: 'Registered At',      key: 'created_at'        },
   { header: 'Leader Name',        key: 'leader_name'       },
   { header: 'Leader Email',       key: 'leader_email'      },
   { header: 'Leader WhatsApp',    key: 'leader_whatsapp'   },
   { header: 'Member 2 Name',      key: 'member2_name'      },
+  { header: 'Member 2 Email',     key: 'member2_email'     },
   { header: 'Member 2 WhatsApp',  key: 'member2_whatsapp'  },
   { header: 'Member 3 Name',      key: 'member3_name'      },
+  { header: 'Member 3 Email',     key: 'member3_email'     },
   { header: 'Member 3 WhatsApp',  key: 'member3_whatsapp'  },
   { header: 'Member 4 Name',      key: 'member4_name'      },
+  { header: 'Member 4 Email',     key: 'member4_email'     },
   { header: 'Member 4 WhatsApp',  key: 'member4_whatsapp'  },
   { header: 'Member 5 Name',      key: 'member5_name'      },
+  { header: 'Member 5 Email',     key: 'member5_email'     },
   { header: 'Member 5 WhatsApp',  key: 'member5_whatsapp'  },
 ];
 
