@@ -104,6 +104,20 @@ export default async function EventPage({ params }) {
 
       {event.description && <p className="event-desc">{event.description}</p>}
 
+      {event.caseDriveUrl && (
+        <div className="register-box">
+          <p>Case materials are now available. Download and review the problem statement before the event.</p>
+          <a
+            href={event.caseDriveUrl}
+            className="register-btn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Case Materials
+          </a>
+        </div>
+      )}
+
       {event.registration ? (
         <div className="register-box">
           <p>Ready to take part?</p>
