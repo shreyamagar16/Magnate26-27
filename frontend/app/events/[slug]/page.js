@@ -121,7 +121,15 @@ export default async function EventPage({ params }) {
       {event.registration ? (
         <div className="register-box">
           <p>Ready to take part?</p>
-          <a href={event.registerUrl} className="register-btn">Register for {event.title}</a>
+          <a
+            href={event.registerUrl}
+            className="register-btn"
+            {...(event.registerExternal
+              ? { target: '_blank', rel: 'noopener noreferrer' }
+              : {})}
+          >
+            Register for {event.title}
+          </a>
         </div>
       ) : event.slug === 'e-cell-meetup' || event.slug === 'boardroom' ? null : (
         <div className="register-box">

@@ -100,6 +100,19 @@ export const EVENTS = [
       "The E-Cell Meetup is a relaxed, open gathering for anyone curious about entrepreneurship, startups, or simply looking to connect with like-minded people. Whether you're a first-year student with a spark of an idea or someone who has already been building, this is the space where conversations happen naturally. You'll meet fellow students, share experiences, and hear perspectives that don't usually come up in a classroom. There are no pitches and no pressure — just good conversations, new connections, and the energy that comes from being in a room full of people who are excited about building things. Come as you are, and leave with at least one person you didn't know before.",
     registration: false,
     registerUrl: '#'
+  },
+  {
+    slug: 'stock-up',
+    title: 'Stock Up',
+    card: '/events/stockup-card.jpg',
+    tagline: 'Trade smart. Think fast.',
+    date: '24th October',
+    venue: 'IT Seminar Hall, PICT',
+    about:
+      'Stock Up is a fast-paced stock market simulation event where teams strategise, trade, and compete in a live mock trading environment. Put your financial thinking, risk management, and market instincts to the test as you navigate real-world scenarios under time pressure. The team that trades smartest and builds the highest portfolio value takes home the prize.',
+    registration: true,
+    registerUrl: 'https://forms.gle/6EYcbnaiePTimnap7',
+    registerExternal: true,
   }
 ];
 
