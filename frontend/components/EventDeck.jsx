@@ -7,17 +7,16 @@ import { EVENTS } from '@/lib/events';
 import './events.css';
 
 const transformStyles = [
-  "rotate(-10deg) translate(-220px)",
-  "rotate(-4deg) translate(-80px)",
-  "rotate(0deg) translate(0px)",
-  "rotate(4deg) translate(80px)",
-  "rotate(10deg) translate(220px)"
+  "rotate(-8deg) translate(-180px)",
+  "rotate(-2deg) translate(-60px)",
+  "rotate(2deg) translate(60px)",
+  "rotate(8deg) translate(180px)"
 ];
 
 export default function EventDeck() {
   const router = useRouter();
   const pathname = usePathname();
-  const images = EVENTS.map((e) => ({ src: e.card, title: e.title, slug: e.slug }));
+  const images = EVENTS.filter((e) => !e.hideFromDeck).map((e) => ({ src: e.card, title: e.title, slug: e.slug }));
 
   const handleClick = (e) => {
     const cardEl = e.target.closest('.card');

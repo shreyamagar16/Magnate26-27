@@ -85,6 +85,7 @@ export const EVENTS = [
       "Boardroom is an open conversation between speakers and assessors. Speakers from the startup and business world sit down with our members to talk about entrepreneurship: what it really takes to build something, the mistakes worth avoiding, and the lessons that only come from experience. They share their field expertise directly with us, and you get to ask questions, challenge ideas, and learn from people who have been through it. If you're curious about startups and entrepreneurship, this room is for you.",
     registration: false,
     registerUrl: '#',
+    hideFromDeck: true,
   },
   {
     slug: 'e-cell-meetup',
@@ -106,6 +107,9 @@ export const EVENTS = [
     title: 'Stock Up',
     card: '/events/stockup-card.jpg',
     tagline: 'Trade smart. Think fast.',
+    heroImage: '/events/stockup-hero.jpg',
+    heroAlt: 'Students participating in Stock Up at Magnate',
+    heroObjectPosition: 'center 30%',
     date: '24th October',
     venue: 'IT Seminar Hall, PICT',
     about:
