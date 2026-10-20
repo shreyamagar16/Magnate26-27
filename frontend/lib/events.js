@@ -110,7 +110,7 @@ export const EVENTS = [
     heroImage: '/events/stockup-hero.jpg',
     heroAlt: 'Students participating in Stock Up at Magnate',
     heroObjectPosition: 'center 30%',
-    date: '24th October',
+    date: '23rd October',
     venue: 'IT Seminar Hall, PICT',
     about:
       'Stock Up is a fast-paced stock market simulation event where teams strategise, trade, and compete in a live mock trading environment. Put your financial thinking, risk management, and market instincts to the test as you navigate real-world scenarios under time pressure. The team that trades smartest and builds the highest portfolio value takes home the prize.',
