@@ -35,10 +35,10 @@ export default function Home() {
             gap={3}
             roundness={0.75}
             interactive
-            cursorStrength={1}
-            cursorSize={40}
+            cursorStrength={0.65}
+            cursorSize={30}
             swirl={0}
-            trail={1.4}
+            trail={0.8}
             lean={0}
             intro
           />

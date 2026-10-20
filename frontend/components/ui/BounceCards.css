@@ -26,6 +26,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  will-change: transform;
 }
 
 @media (max-width: 768px) {

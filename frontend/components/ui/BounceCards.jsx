@@ -9,7 +9,7 @@ export default function BounceCards({
   images = [],
   containerWidth = 500,
   containerHeight = 300,
-  animationDelay = 0.5,
+  animationDelay = 0.1,
   animationStagger = 0.06,
   easeType = 'elastic.out(1, 0.8)',
   transformStyles = [
@@ -148,7 +148,7 @@ export default function BounceCards({
             onMouseEnter={() => pushSiblings(idx)}
             onMouseLeave={resetSiblings}
           >
-            <img className="image" src={src} alt={`card-${idx}`} />
+            <img className="image" src={src} alt={`card-${idx}`} loading="lazy" decoding="async" />
             {title && (
               <div className="card-title">
                 {title}

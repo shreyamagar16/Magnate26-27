@@ -52,11 +52,11 @@ const SWELL_PRESETS = {
   }
 };
 
-const FLUID_SIZE = 96;
-const PRESSURE_STEPS = 16;
+const FLUID_SIZE = 64;
+const PRESSURE_STEPS = 10;
 const SPLAT_FORCE = 6900;
 const SPLASH_JETS = 3;
-const PIXEL_BUDGET = 4.5e6;
+const PIXEL_BUDGET = 2.5e6;
 
 const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
 
