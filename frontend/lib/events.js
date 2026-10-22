@@ -51,7 +51,8 @@ export const EVENTS = [
           'Present your idea in a 10-minute pitch in front of a panel of experts and judges, followed by their questions and feedback.',
       },
     ],
-    registration: true,
+    registration: false,
+    registrationsClosed: true,
     registerUrl: '/register',
   },
   {
@@ -68,7 +69,8 @@ export const EVENTS = [
     description: 'Case competition...',
     about: 'CaseCom puts you in the middle of a real business problem and asks you to find a way through it. Teams are given a case study drawn from the world of startups and business, and you have to analyse it, build a strategy, and present your solution to a panel of judges. It is not about having the right answer — it is about how clearly you think, how well you structure your reasoning, and how confidently you defend your decisions under pressure. Every case is different, and every pitch is a chance to sharpen the skills that matter in the real world. If you enjoy dissecting problems and turning them into plans, this is the room for you.',
     caseDriveUrl: 'https://drive.google.com/drive/folders/1UQWVfK7CnhzoqOzq9wuyMFR31ZPYVXhX',
-    registration: true,
+    registration: false,
+    registrationsClosed: true,
     registerUrl: '/register/casecom'
   },
   {

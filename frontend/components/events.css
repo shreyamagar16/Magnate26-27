@@ -75,6 +75,8 @@
 .register-box p { color: rgba(255, 255, 255, 0.7); margin-bottom: 22px; }
 .register-btn { display: inline-block; background: #4ade80; color: #000; font-weight: 700; padding: 16px 40px; border-radius: 999px; text-decoration: none; transition: transform 0.15s, box-shadow 0.15s; }
 .register-btn:hover { transform: translateY(-2px); box-shadow: 0 0 22px rgba(74, 222, 128, 0.55); }
+.register-btn--closed { background: rgba(74, 222, 128, 0.18); color: rgba(255, 255, 255, 0.45); cursor: default; pointer-events: none; }
+.register-btn--closed:hover { transform: none; box-shadow: none; }
 @media (max-width: 700px) { .gallery { grid-template-columns: 1fr; grid-template-rows: auto; height: auto; } .gallery img:first-child { grid-row: auto; } .gallery img { height: 220px; } }
 
 /* About & Rounds sections */
