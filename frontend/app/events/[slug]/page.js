@@ -118,7 +118,11 @@ export default async function EventPage({ params }) {
         </div>
       )}
 
-      {event.registration ? (
+      {event.registrationsClosed ? (
+        <div className="register-box">
+          <span className="register-btn register-btn--closed">Registrations are closed</span>
+        </div>
+      ) : event.registration ? (
         <div className="register-box">
           <p>Ready to take part?</p>
           <a
